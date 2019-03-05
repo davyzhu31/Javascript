@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+	<link rel="stylesheet" href="css/orderformsection.css">
+</head>
+
+<body>
+	<!--My Section Here-->
+	<section>
+		<!--Header 2 Form Label-->
+		<h2>Custom Order Sandwich</h2>
+		<hr>
+		<!--Form-->
+     <form id="myform" name="myform">
+         <p style="text-align: center; font-size: 24px; color: yellow"><strong>*</strong> indicates required.</p>
+         <hr>
+		<table>
+			<!--Name-->
+			<tr>
+				<!--First Name-->
+				<td>
+                    <label>*First Name: </label>
+				    <input id="firstname" name="firstname" placeholder="Your First Name" type="text" size="20" value="">
+                    <br>
+                    <small id="errorFirstName" class="errorText"></small>
+                </td>
+				<!--Last Name-->
+				<td>
+                    <label>*Last Name: </label>
+				    <input id="lastname" name="lastname" placeholder="Your Last Name" type="text" size="20" value="">
+                    <br>
+                    <small id="errorLastName" class="errorText"></small>
+                </td>
+			</tr>
+            
+            <tr>
+				<td>
+					<!--Breads-->
+					<label>*Breads</label><label id="breads" value=""></label>
+					<br/>
+					<input id="whitebread" class="bread" name="bread" type="radio" value='1.00' onClick="price()">
+					<label>White Bread $1.00</label>
+					<br/>
+					<input id="wheatbread" class="bread" name="bread" type="radio" value="1.20" onClick="price()">
+					<label>Wheat Bread $1.20</label>
+					<br/>
+					<input id="grainbread" class="bread" name="bread" type="radio" value="1.40" onClick="price()">
+					<label>Grains Bread $1.40</label>
+                    <br>
+                    <small id="errorBread" class="errorText"></small>
+				</td>
+				<td>
+					<!--Cheeses-->
+					<label>*Cheeses</label><label id="cheeses" value=""></label>
+					<br/>
+					<input id="cheddar" class="cheeses" name="cheeses" type="radio" value="0.20" onClick="price()">
+					<label>Cheddar $0.20</label>
+					<br/>
+					<input id="swiss" class="cheeses" name="cheeses" type="radio" value="0.30" onClick="price()">
+					<label>Swiss $0.30</label>
+					<br/>
+					<input id="havarti" class="cheeses" name="cheeses" type="radio" value="0.40" onClick="price()">
+					<label>Havarti $0.40</label>
+                    <br>
+                    <small id="errorCheeses" class="errorText"></small>
+				</td>
+			</tr>
+            
+			<tr>
+				<td>
+					<!--Meats-->
+					<label>*Meats</label><label id="meats" value=""></label>
+					<br/>
+                    <input id="chicken" class="meats" name="meats" type="radio" value="1.00" onClick="price()">
+					<label>Chicken $1.00</label>
+                    <br/>
+					<input id="turkey" class="meats" name="meats" type="radio" value="1.20" onClick="price()">
+                    <label>Turkey $1.20</label>
+					<br/>
+					<input id="ham" class="meats" name="meats" type="radio" value="1.40" onClick="price()">
+					<label>Ham $1.40</label>
+					<br/>
+					<input id="beef" class="meats" name="meats" type="radio" value="1.60" onClick="price()">
+					<label>Beef $1.60</label>
+                    <br>
+                    <small id="errorMeats" class="errorText"></small>
+				</td>
+				<td>
+					<!--Vegetables-->
+					<label>*Vegetables</label><label id="vegetables" value=""></label>
+					<br/>
+					<input id="lettuces" class="vegetables" name="vegetables" type="checkbox" value="0.20" onClick="price()">
+					<label>Lettuces $0.20</label>
+					<br/>
+					<input id="tomatos" class="vegetables" name="vegetables" type="checkbox" value="0.20" onClick="price()">
+					<label>Tomatos $0.20</label>
+					<br/>
+					<input id="pickles" class="vegetables" name="vegetables" type="checkbox" value="0.20" onClick="price()">
+					<label>Pickles $0.20</label>
+					<br/>
+					<input id="onions" class="vegetables" name="vegetables" type="checkbox" value="0.20" onClick="price()">
+					<label>Onions $0.20</label>
+					<br/>
+					<input id="carrots" class="vegetables" name="vegetables" type="checkbox" value="0.20" onClick="price()">
+					<label>Carrot $0.20</label>
+                    <br>
+                    <small id="errorVegetables" class="errorText"></small>
+				</td>
+			</tr>
+			
+			<!--Condiments-->
+			<tr>
+				<td class="center" colspan="2">
+					<label id="condiments">Condiments</label><label class="condiment"></label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>1:</label>
+					<select id="condiments1" onchange="price();">
+						<option value="0.00">None Condiments</option>
+						<option value="0.10">Mayonnaise $0.10</option>
+						<option value="0.10">Mustard $0.10</option>
+					</select>
+                    <label id="condiment1"></label>
+					<label>2:</label>
+					<select id="condiments2" onchange="price();">
+						<option value="0.00">None Condiments</option>
+						<option value="0.10">Mayonnaise $0.10</option>
+						<option value="0.10">Mustard $0.10</option>
+					</select>
+                    <label id="condiment2"></label>
+				</td>
+				<td>
+					<label>3:</label>
+					<select id="condiments3" onChange="price();">
+						<option value="0.00">None Condiments</option>
+						<option value="0.10">Mayonnaise $0.10</option>
+						<option value="0.10">Mustard $0.10</option>
+					</select>
+                    <label id="condiment3"></label>
+					<label>4:</label>
+					<select id="condiments4" onChange="price();">
+						<option value="0.00">None Condiments</option>
+						<option value="0.10">Mayonnaise $0.10</option>
+						<option value="0.10">Mustard $0.10</option>
+					</select>
+                    <label id="condiment4"></label>
+				</td>
+			</tr>
+            
+			<tr>
+				<td class="center" colspan="2">
+					<!--Drinks-->
+                    <label>Drinks: </label>
+					<select id="drinks" onChange="price();">
+                        <option value="0.00">No Drink $0.00</option>
+						<option value="1.00">Small Cola $1.00</option>
+						<option value="1.40">Medium Cola $1.40</option>
+						<option value="1.80">Large Cola $1.80</option>
+						<option value="1.00">Small Root Beer $1.00</option>
+						<option value="1.40">Medium Root Beer $1.40</option>
+						<option value="1.80">Large Root Beer $1.80</option>
+						<option value="1.00">Small Mountain Dew $1.00</option>
+						<option value="1.40">Medium Mountain Dew $1.40</option>
+						<option value="1.80">Large Mountain Dew $1.80</option>
+						<option value="1.00">Small 7UP $1.00</option>
+						<option value="1.40">Medium 7UP $1.40</option>
+						<option value="1.80">Large 7UP $1.80</option>
+						<option value="1.00">Small Dr Pepper $1.00</option>
+						<option value="1.40">Medium Dr Pepper $1.40</option>
+						<option value="1.80">Large Dr Pepper $1.80</option>
+					</select>
+                    <label id="drink"></label>
+				</td>
+            </tr>
+            
+            <tr>
+				<td class="center" colspan="2">
+					<!--Extras-->
+					<label>Extras</label><label id="extra"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+					<label>1:</label>
+					<select id="extra1" onChange="price();">
+						<option value="0.00">None Extras</option>
+						<option value="0.40">Bacons $0.40</option>
+						<option value="0.20">Lettuces $0.20</option>
+					</select>
+                    <label id="extras1"></label>
+                </td>
+                <td>
+					<label>2:</label>
+					<select id="extra2" onChange="price();">
+						<option value="0.00">None Extras</option>
+						<option value="0.40">Bacons $0.40</option>
+						<option value="0.20">Lettuces $0.20</option>
+					</select>
+                    <label id="extras2"></label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!--Quantity-->
+					<label>Quantity: </label>
+					<input id="quantity" name="quantity" type="number" size="2" value="1" min="1" max="99">   
+                </td>
+                <td>
+					<!--Total Cost-->
+					<label>Total Cost: $</label><label id="total" value=""></label><p>Included Tax</p>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<!--Agree-->
+					<input id="agree" name="agree" type="checkbox" value="1" onclick="enableSubmit(this);"><label>I agree to the <a>Terms of the site</a></label>
+                </td>    
+                <td>
+					<!--Submit-->
+					<input onClick="validateForm()" id="submit" name="submit" type="submit" value="Submit">
+					<!--Reset-->
+					<input id="reset" name="reset" type="reset" value="Reset" onClick="window.location.reload()">
+				</td>	
+			</tr>
+		</table>
+    </form>
+	</section>
+    
+    <!--Calculator Javscript-->
+	<script src="js/calculator.js" type="text/javascript"></script>  
+    <!--Agree to Submit Javscript-->
+	<script src="js/agreetosubmit.js" type="text/javascript"></script>   
+    <!--Error Javscript-->
+	<script src="js/error.js" type="text/javascript"></script>   
+</body>
+</html>
