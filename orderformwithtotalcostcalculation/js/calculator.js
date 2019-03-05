@@ -18,7 +18,7 @@ function price() {
     }
     else if (btype[2].checked) {
         var breadval = btype[2].value;
-    }
+    }else {var breadval = 0;}
     
     //Meats Values IF|Else IF Statement
     if (mtype[0].checked) {
@@ -32,7 +32,7 @@ function price() {
     }
     else if (mtype[3].checked) {
         var meatval = mtype[3].value;
-    }
+    }else {var meatval = 0;}
     
     //Cheeses Values IF|Else IF Statement
     if (ctype[0].checked) {
@@ -43,7 +43,7 @@ function price() {
     }
     else if (ctype[2].checked) {
         var cheeseval = ctype[2].value;
-    }
+    }else {var cheeseval = 0;}
     
     //Vegetable Values If|Else Statement Else Value of Zero
     if (vtype[0].checked) {
@@ -111,13 +111,12 @@ function price() {
     
     //Total Input
     document.getElementById('total').innerHTML = total.toFixed(2);
-    //Bread Price
-    document.getElementById('breads').innerHTML = " Cost: $" + breadval + " ";
-    //Meat Price
-    document.getElementById('meats').innerHTML = " Cost: $" + meatval + " ";
-    //Cheese Price
-    document.getElementById('cheeses').innerHTML = " Cost: $" + cheeseval + " ";
+
     //Vegetable(s) Price
     document.getElementById('vegetables').innerHTML = " Cost: $" + vegetables.toFixed(2) + " ";
+    
+    document.getElementById('condiment').innerHTML = " Cost: $" + condiment.toFixed(2) + " ";
+    
+    document.getElementById('extra').innerHTML = " Cost: $" + extra.toFixed(2) + " ";   
     
 }
