@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+/*Section CSS*/		
+section {
+    background-color: rgba(0,0,0,0.42);
+}
+
+/*Section Header 2 CSS*/
+section h2 {
+	text-align: center;
+	line-height: 1.2;
+    font-size: 48px;
+}
+
+/*Section Paragraph CSS*/
+section p {
+	line-height: 0.1;
+    font-size: 16px;
+    color: orange;
+}
+
+/*Table CSS*/
+section table {
+	padding-bottom: 60px;
+	margin: auto;
+    font-size: 24px;
+    padding: 10px;
+}
+
+/*Table Inputs CSS*/
+section table input {
+    font-size: 24px;
+    border-radius: 10px;
+    background-color: rgba(160,160,160,1.00);
+}
+
+/*Table Inputs Placeholder CSS*/
+section table input::placeholder {
+    color: rgba(80,80,80,1.00);
+}
+
+/*Table Selects CSS*/
+section table select {
+    font-size: 24px;
+    background-color: rgba(160,160,160,1.00);
+}
+
+/*Table Options CSS*/
+section table option {
+    font-size: 24px;
+    background-color: rgba(160,160,160,1.00);
+}
+
+/*Table Labels CSS*/
+section table label {
+    line-height: 1.8;
+    font-size: 36px;
+}
+
+/*Table Data CSS*/
+section table td {
+	padding: 10px;
+    font-size: 24px;
+}
+
+/*Agree Hyperlink CSS*/
+section table a {
+	color: red;
+}
+section table a:hover {
+	color: white;
+}
+
+/*Centerize Table*/
+.center {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+/*Input Radio and Checkbox CSS*/
+#agree, .meats, .bread, .cheeses, .vegetables {
+    background-color: rgba(160,160,160,1.00);
+    color: rgba(160,160,160,1.00);
+    height: 25px;
+    width: 25px;
+}
+
+/*Error Message*/
+small {
+    color: yellow;
+    font-size: 24px;
+}
+
+#breads, #cheeses, #meats, #vegetables, #condiment1, #condiment2, #condiment3, #condiment4, #drink, #extras1, #extras2 {
+    font-size: 18px;
+    color: white;
+}
